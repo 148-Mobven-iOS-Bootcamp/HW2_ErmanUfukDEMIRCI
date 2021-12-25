@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -51,11 +51,11 @@ class MainViewController: UIViewController {
     // MARK: - Action
     
     @objc private func onPopupButton() {
-        print("Button")
+        let popupViewController = PopupViewController()
+        present(popupViewController, animated: true) {
+            print("Presented now")
+        }
     }
-    
-    
-    
 }
 
 
